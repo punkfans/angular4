@@ -1,7 +1,9 @@
 <h1>
-  {{title}} hello world
+  Raddit
 </h1>
 
 <p>Type in the page you want to see </p>
 <input type="text" placeholder="please type..." [(ngModel)]="subject">
-<button (click)="submitSubject()">Let's Go!</button>
+<button (click)="getReddit()">Let's Go!</button>
+
+<app-my-reddit [posts]="posts"></app-my-reddit>

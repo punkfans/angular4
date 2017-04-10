@@ -1,0 +1,9 @@
+<p>
+  my-reddit works!
+</p>
+
+ <ul>
+   <li *ngFor="let post of posts">
+     <a [href]="post.url" target="_blank">{{post.title}}</a>
+   </li>
+ </ul>

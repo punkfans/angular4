@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RedditDataServiceService } from './reddit-data-service.service'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   subject = '';
-  submitSubject() {
-    console.log(this.subject);
+  posts: object[];
+  constructor(private redditDataService: RedditDataServiceService) {}
+  getReddit() {
+    this.redditDataService.getData(this.subject).subscribe(
+      posts => {
+        this.posts = posts;
+      }
+    );
   }
 }
