@@ -1,3 +1,7 @@
 <h1>
   {{title}} hello world
 </h1>
+
+<p>Type in the page you want to see </p>
+<input type="text" placeholder="please type..." [(ngModel)]="subject">
+<button (click)="submitSubject()">Let's Go!</button>

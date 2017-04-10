@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  subject = '';
+  submitSubject() {
+    console.log(this.subject);
+  }
 }
