@@ -14,6 +14,7 @@ export class AppComponent {
   getReddit() {
     this.redditDataService.getData(this.subject).subscribe(
       posts => {
+        console.log(posts);
         this.posts = posts;
       }
     );

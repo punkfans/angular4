@@ -2,8 +2,12 @@
   my-reddit works!
 </p>
 
- <ul>
+ <ul *ngIf="posts">
    <li *ngFor="let post of posts">
      <a [href]="post.url" target="_blank">{{post.title}}</a>
    </li>
  </ul>
+
+ <div *ngIf="!posts">
+   No such topics
+ </div>
